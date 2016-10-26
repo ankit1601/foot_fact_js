@@ -1,16 +1,37 @@
 [{
 	"region": "North Europe",
-	"fat": 17107.09000000002,
-	"protein": 8475.689000000008,
-	"carbohydrate": 31858.43999999998
+	"consumption": [{
+		"item": "fat",
+		"value": 17107.09000000002
+	}, {
+		"item": "protein",
+		"value": 8475.689000000008
+	}, {
+		"item": "carbohydrate",
+		"value": 31858.43999999998
+	}]
 }, {
 	"region": "Central Europe",
-	"fat": 377737.0363329951,
-	"protein": 220215.15770000097,
-	"carbohydrate": 789937.0098999911
+	"consumption": [{
+		"item": "fat",
+		"value": 377737.0363329951
+	}, {
+		"item": "protein",
+		"value": 220215.15770000097
+	}, {
+		"item": "carbohydrate",
+		"value": 789937.0098999911
+	}]
 }, {
 	"region": "South Europe",
-	"fat": 33241.29930000003,
-	"protein": 15618.282000000012,
-	"carbohydrate": 69091.26999999999
+	"consumption": [{
+		"item": "fat",
+		"value": 33241.29930000003
+	}, {
+		"item": "protein",
+		"value": 15618.282000000012
+	}, {
+		"item": "carbohydrate",
+		"value": 69091.26999999999
+	}]
 }]

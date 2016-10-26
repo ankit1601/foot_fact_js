@@ -8,6 +8,9 @@ var fs = require('fs');
  * @type {[type]}
  */
 var rL = require('readline');
+/*
+Here We have defined all thr required variable which are used to generate JSON files
+ */
 var isheader = true;
 var manupulated = [],
 	header = [];
@@ -97,6 +100,10 @@ readInterface.on('line', function(line) {
 
 
 	}
+	/**
+	 * [if description]
+	 * @param  {[Number]} (northEurope.indexOf(data[headerIndex]) !         [if in data at header index value not found in north Europe then it will return -1]
+	 */
 	if ((northEurope.indexOf(data[headerIndex]) != -1)) {
 		index = regions.indexOf("North Europe");
 		protein = data[proteinIndex];
@@ -153,13 +160,19 @@ readInterface.on('close', function() {
 
 	}
 	for (var j = 0; j < regions.length; j++) {
-		var obj2 = {};
+		var obj2 = {},obj3={},obj4={},obj5={};
+		var objArray;
 		obj2.region = regions[j];
-		obj2.fat = fatData[j];
-		obj2.protein = proteinData[j];
-		obj2.carbohydrate = carbohydrateData[j];
+		obj3.item = "fat";
+		obj3.value=fatData[j];
+		obj4.item ="protein";
+		obj4.value=proteinData[j];
+		obj5.item = "carbohydrate";
+		obj5.value = carbohydrateData[j];
+		objArray = [obj3,obj4,obj5];
+		obj2.consumption = objArray
 		secondJson.push(obj2);
 	}
-	fs.writeFile('./../json/countries.json', JSON.stringify(firstJson), 'utf-8');
-	fs.writeFile('./../json/regions.json', JSON.stringify(secondJson), 'utf-8');
+	fs.writeFile('./json/countries.json', JSON.stringify(firstJson), 'utf-8');
+	fs.writeFile('./json/regions.json', JSON.stringify(secondJson), 'utf-8');
 });

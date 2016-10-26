@@ -1,22 +1,44 @@
 body {
-  font: 15px sans-serif;
-  background: pink;
-
+	font: 10px sans-serif;
 }
-
+li {
+	font: 15px sans-serif;
+}
+.axis path, .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+.x.axis path {
+	display: none;
+}
 .line {
-    
-    stroke-width: 2px;
-}
-path {
-	
-	stroke-width: 2;
 	fill: none;
+	stroke: steelblue;
+	stroke-width: 1.5px;
 }
-
-.axis path,
-.axis line {
+svg {
+	border: 1px solid black;
+}
+.grid {
 	fill: none;
-	stroke: grey;  /*x and y axis line*/
-	stroke-width: 1.5;
-	}
+	shape-rendering: crispEdges;
+	stroke: lightgrey;
+	opacity: 0.7;
+	stroke-width: 1px;
+}
+.segmentText {
+	cursor: pointer;
+}
+div.tooltip {
+	position: absolute;
+	text-align: center;
+	width: 120px;
+	height: 25px;
+	padding: 5px;
+	font: 12px sans-serif;
+	background: #ddd;
+	border: solid 1px #aaa;
+	border-radius: 8px;
+	pointer-events: none;
+}
