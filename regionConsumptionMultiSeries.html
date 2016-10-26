@@ -36,7 +36,7 @@ path {
 <body>
 
 <div id="multiline">
-	<h1>region Vs (fat,protein,carbohydrate)</h1>
+	<h1>Multi-Series Line Graph for protein , Fat , Carbohydrate for Europe</h1>
 	<h4 style="color:blue;text-align:center">Carbohydrate</h4>
 	<h4 style="color:red;text-align:center">Fat</h4>
 	<h4 style="color:green;text-align:center">Protein</h4>
@@ -94,7 +94,7 @@ d3.json("./json/regions.json", function(error, data) {
   }));
 	// Scale the range of the data
  	
-	y.domain([0, d3.max(data, function(d) {console.log(d.fat+""+d.protein+d.carbohydrate); return Math.max(d.fat, d.protein,d.carbohydrate); })]);
+	y.domain([0, d3.max(data, function(d) { return Math.max(d.fat, d.protein,d.carbohydrate); })]);
 
 	svg.append("path")		
 		.attr("class", "line")
